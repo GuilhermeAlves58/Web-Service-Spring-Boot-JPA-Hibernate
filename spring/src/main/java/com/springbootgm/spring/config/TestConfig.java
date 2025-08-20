@@ -12,6 +12,7 @@ import com.springbootgm.spring.entites.Category;
 import com.springbootgm.spring.entites.Order;
 import com.springbootgm.spring.entites.OrderItem;
 import com.springbootgm.spring.entites.OrderStatus;
+import com.springbootgm.spring.entites.Payment;
 import com.springbootgm.spring.entites.Product;
 import com.springbootgm.spring.entites.User;
 import com.springbootgm.spring.repositories.CategoryRepository;
@@ -78,6 +79,10 @@ public class TestConfig implements CommandLineRunner {
         OrderItem oi4 = new OrderItem(o3, p5, 2, p5.getPrice()); 
 
         orderItemRepository.saveAll(Arrays.asList(oi1,oi2,oi3,oi4));
+
+        Payment pay1 = new Payment(null,Instant.parse("2019-06-20T19:53:07Z"),o1);
+        o1.setPayment(pay1);
+        orderRepository.save(o1);
     }
 
 }
