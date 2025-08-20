@@ -31,17 +31,21 @@ public class OrderItem implements Serializable {
         this.price = price;
 
     }
+
     @JsonIgnore
     public Order getOrder(){
         return id.getOrder();
     }
+
     public void setOrder(Order order){
         id.setOrder(order);
     }
-
+    
+    @JsonIgnore
     public Product getProduct(){
         return id.getProduct();
     }
+    
     public void setProduct(Product product){
         id.setProduct(product);
     }
