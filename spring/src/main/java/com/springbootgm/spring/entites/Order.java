@@ -31,6 +31,9 @@ public class Order implements Serializable {
 
     private Integer orderStatus;
 
+    public Order(){
+        
+    }
     public Order(Long id, Instant moment, User client,OrderStatus orderStatus) {
         this.id = id;
         this.moment = moment;

@@ -27,6 +27,9 @@ public class Category implements Serializable {
     @JsonIgnore
     private Set<Product> Products = new HashSet<>();
 
+    public Category(){
+    }
+
     public Category(Long id, String name) {
         this.id = id;
         this.name = name;
